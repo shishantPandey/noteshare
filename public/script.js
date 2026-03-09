@@ -30,6 +30,8 @@ async function loginUser() {
     if (data.token) {
         localStorage.setItem("token", data.token)
         localStorage.setItem("username", data.name)  // store user name
+        localStorage.setItem("role", data.role) // Save role
+
         window.location.href = "dashboard.html"
     } else {
         alert(data.message)

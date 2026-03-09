@@ -86,7 +86,7 @@ router.post("/login", async (req, res) => {
         "secretkey"
     )
 
-    res.json({ token: token, name: user.name })
+    res.json({ token: token, name: user.name, role:user.role})
 })
 
 // Get pending users (admin only)

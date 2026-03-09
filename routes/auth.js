@@ -63,7 +63,9 @@ name:user.name
 console.log(user.name)
 res.json({
 token:token,
-name:user.name
+name:user.name,
+role: user.role  // send role along with token
+
 })
 })
 

@@ -1,3 +1,11 @@
+<script>
+    const token = localStorage.getItem("token")
+    const role = localStorage.getItem("role")  // ⚠ get role
+    if(!token || role !== "admin") {
+        alert("Access denied! Login as admin first.")
+        window.location.href = "index.html"
+    }
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,17 +49,8 @@
 <div id="users">
     <!-- Pending users will be loaded here -->
 </div>
-<script>
-    // Check if user is logged in and is admin
-    const token = localStorage.getItem("token")
-    const role = localStorage.getItem("role")  // we will save role on login
-
-    if (!token || role !== "admin") {
-        alert("Access denied! Login as admin first.")
-        window.location.href = "index.html"
-    }
-</script>
 <script src="script.js"></script>
+
 <script>
     // ----------------- Basic Admin Functions -----------------
 
